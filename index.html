@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>RLN DESIGNERS — Rayron Lima | Designer Gráfico</title>
+<meta name="description" content="Transformando ideias em design criativo e resultados visuais profissionais. Portfolio do designer gráfico Rayron Lima." />
+<meta property="og:title" content="RLN DESIGNERS — Rayron Lima" />
+<meta property="og:description" content="Transformando ideias em design criativo e resultados visuais profissionais." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rlndesigners.com.br" />
+<meta property="og:image" content="link-para-imagem-de-capa.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="RLN DESIGNERS — Rayron Lima" />
+<meta name="twitter:description" content="Transform ando ideias em design criativo e resultados visuais profissionais." />
+<meta name="twitter:image" content="link-para-imagem-de-capa.jpg" />
+<link rel="icon" href="imagens\capa.png" type="image/png" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin:0;
+    background: linear-gradient(135deg, #0B0B0B 0%, #1E1E1E 100%);
+    color: #FFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  /* Variables */
+  :root {
+    --color-primary: #E50914;
+    --color-primary-dark: #B20710;
+    --color-primary-light: #FF2626;
+    --color-base-dark: #0B0B0B;
+    --color-base-dark-alt: #121212;
+    --color-accent-dark: #1E1E1E;
+    --color-accent-darker: #2A2A2A;
+    --color-white: #FFFFFF;
+    --border-radius-pill: 22px;
+    --letter-spacing-title: 0.05em;
+    --transition-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-base-dark-alt);
+    box-shadow: 0 2px 10px rgba(229,9,20,0.25);
+    backdrop-filter: saturate(180%) blur(8px);
+  }
+  nav.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    letter-spacing: var(--letter-spacing-title);
+    position: relative;
+    user-select: none;
+  }
+  .logo:hover,
+  .logo:focus-visible {
+    color: var(--color-primary);
+    text-shadow: 0 0 6px var(--color-primary-light);
+    outline: none;
+  }
+  ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  ul.menu li a {
+    color: var(--color-white);
+    font-weight: 600;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 0.03em;
+    position: relative;
+    padding: 0.2rem 0;
+  }
+  ul.menu li a:focus-visible,
+  ul.menu li a:hover {
+    color: var(--color-primary);
+    text-shadow: 0 0 10px var(--color-primary-light);
+    outline-offset: 2px;
+  }
+
+  /* Hero */
+  #hero {
+    position: relative;
+    background: radial-gradient(circle at top right, #1E1E1E 0%, #0B0B0B 90%);
+    min-height: 90vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem 6rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+  }
+
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    right: -3rem;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(ellipse at center, var(--color-primary-light) 0%, transparent 70%);
+    filter: blur(100px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #hero::after {
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, var(--color-primary) 0%, transparent 80%);
+    filter: blur(60px);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* Sparkles */
+  .sparkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--color-primary-light);
+    border-radius: 100%;
+    opacity: 0.15;
+    animation: sparkleMotion 8s linear infinite;
+  }
+  @keyframes sparkleMotion {
+    0% { opacity: 0.15; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.15; }
+  }
+
+  /* Hero left */
+  #hero-content {
+    flex: 1 1 320px;
+    max-width: 550px;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing-title);
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+  }
+  #hero-content h1 strong {
+    color: var(--color-primary);
+    font-weight: 800;
+  }
+  #hero-content p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 420px;
+  }
+
+  /* Buttons grupo */
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    color: var(--color-white);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: var(--border-radius-pill);
+    border: none;
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    box-shadow:
+      0 0 6px var(--color-primary-light),
+      inset 0 0 12px var(--color-primary-light);
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition-fast);
+    user-select: none;
+  }
+  .btn svg {
+    margin-right: 0.6rem;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+  /* Shine overlay */
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 150%;
+    height: 150%;
+    background:
+      linear-gradient(120deg, rgba(255,255,255,0.25) 0%, transparent 60%);
+    transform: rotate(25deg);
+    transition: transform 1.5s ease-in-out;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .btn:hover::before,
+  .btn:focus-visible::before {
+    transform: translateX(200%) rotate(25deg);
+  }
+  /* Glow on hover */
+  .btn:hover,
+  .btn:focus-visible {
+    box-shadow:
+      0 0 12px var(--color-primary-light),
+      inset 0 0 16px var(--color-primary-light);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  /* Press effect */
+  .btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow:
+      0 0 8px var(--color-primary-dark),
+      inset 0 0 10px var(--color-primary-dark);
+  }
+  /* Focus visible */
+  .btn:focus-visible {
+    outline: 3px solid #FF6666;
+    outline-offset: 3px;
+  }
+
+  /* Hero right - photo */
+  #hero-photo-container {
+    flex: 1 1 280px;
+    max-width: 320px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+  }
+  #hero-photo {
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 0 40px var(--color-primary);
+    filter: drop-shadow(0 0 10px var(--color-primary));
+    transition: transform 0.3s ease;
+    object-fit: cover;
+  }
+  #hero-photo-container:hover #hero-photo,
+  #hero-photo-container:focus-within #hero-photo {
+    transform: scale(1.04);
+  }
+
+  /* Sobre Mim */
+  #sobre-mim {
+    max-width: 900px;
+    margin: 5rem auto 7rem auto;
+    padding: 0 1rem;
+  }
+  #sobre-mim h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    letter-spacing: var(--letter-spacing-title);
+    text-align: center;
+  }
+  #sobre-mim p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.7;
+    color: #DDD;
+    text-align: center;
+  }
+  #sobre-mim video {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(229,9,20,0.25);
+  }
+  #sobre-mim .btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius-pill);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: var(--transition-fast);
+    text-align: center;
+    margin: 0 auto;
+    user-select: none;
+  }
+  #sobre-mim .btn-secondary:hover,
+  #sobre-mim .btn-secondary:focus-visible {
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 0 12px var(--color-primary-light);
+    outline: none;
+  }
+  #sobre-mim .btn-secondary:focus-visible {
+    outline: 3px solid #FF6666;
+    outline-offset: 3px;
+  }
+
+  /* Trabalhos (Portfólio) */
+  #trabalhos {
+    max-width: 1200px;
+    margin: 5rem auto 7rem auto;
+    padding: 0 1rem;
+  }
+  #trabalhos h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    letter-spacing: var(--letter-spacing-title);
+    text-align: center;
+  }
+
+  /* Filtros */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .filter-button {
+    background-color: var(--color-accent-dark);
+    border: none;
+    color: var(--color-primary);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius-pill);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow:
+      inset 0 0 6px var(--color-primary),
+      0 0 0 transparent;
+  }
+  .filter-button:hover,
+  .filter-button:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow:
+      inset 0 0 14px var(--color-primary-light),
+      0 0 10px var(--color-primary-light);
+    outline: none;
+  }
+  .filter-button.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow:
+      inset 0 0 14px var(--color-primary-light),
+      0 0 12px var(--color-primary-light);
+    cursor: default;
+  }
+  .filter-button:focus-visible {
+    outline: 3px solid #FF6666;
+    outline-offset: 3px;
+  }
+
+  /* Grid portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .portfolio-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.7);
+    cursor: pointer;
+    background: var(--color-accent-darker);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .portfolio-card:hover,
+  .portfolio-card:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: 0 0 16px var(--color-primary-light);
+    outline: none;
+  }
+  .portfolio-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .portfolio-info {
+    padding: 1rem 1.25rem;
+    color: var(--color-white);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .portfolio-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+  }
+  .portfolio-info span.category {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  /* Overlay escuro on hover */
+  .portfolio-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    transition: background 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .portfolio-card:hover::before,
+  .portfolio-card:focus-visible::before {
+    background: rgba(18,18,18,0.65);
+  }
+
+  /* Botão Ver Mais Instagram */
+  .btn-instagram {
+    display: block;
+    max-width: 280px;
+    margin: 3rem auto 0 auto;
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    border-radius: var(--border-radius-pill);
+    padding: 0.9rem 2rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    cursor: pointer;
+    box-shadow:
+      0 0 6px var(--color-primary-light),
+      inset 0 0 12px var(--color-primary-light);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-fast);
+    user-select: none;
+  }
+  .btn-instagram::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 150%;
+    height: 150%;
+    background:
+      linear-gradient(120deg, rgba(255,255,255,0.25) 0%, transparent 60%);
+    transform: rotate(25deg);
+    transition: transform 1.5s ease-in-out;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .btn-instagram:hover::before,
+  .btn-instagram:focus-visible::before {
+    transform: translateX(200%) rotate(25deg);
+  }
+  .btn-instagram:hover,
+  .btn-instagram:focus-visible {
+    box-shadow:
+      0 0 12px var(--color-primary-light),
+      inset 0 0 16px var(--color-primary-light);
+    outline: none;
+  }
+  .btn-instagram:focus-visible {
+    outline: 3px solid #FF6666;
+    outline-offset: 3px;
+  }
+
+  /* Lightbox styles */
+  #lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(11,11,11,0.95);
+    z-index: 1500;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  #lightbox.active {
+    display: flex;
+  }
+  #lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 16px;
+    box-shadow: 0 0 30px var(--color-primary);
+  }
+  #lightbox .close-btn,
+  #lightbox .prev-btn,
+  #lightbox .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow:
+      0 0 10px var(--color-primary-light);
+    transition: background 200ms ease-in-out;
+  }
+  #lightbox .close-btn {
+    top: 1.5rem;
+    right: 1.5rem;
+    transform: none;
+  }
+  #lightbox .close-btn:hover,
+  #lightbox .prev-btn:hover,
+  #lightbox .next-btn:hover {
+    background: var(--color-primary-light);
+  }
+  #lightbox .prev-btn {
+    left: 5%;
+  }
+  #lightbox .next-btn {
+    right: 5%;
+  }
+  #lightbox .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(100%);
+    border: 0;
+    padding: 0;
+  }
+
+  /* Contato / Orçamento */
+  #contato {
+    max-width: 900px;
+    margin: 5rem auto 3rem auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    border-radius: 24px;
+    box-shadow: 0 0 40px var(--color-primary-light);
+    color: var(--color-white);
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+  }
+  #contato p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  #contato .btn-contact {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border-radius: var(--border-radius-pill);
+    padding: 1.1rem 3rem;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    box-shadow:
+      0 0 14px var(--color-primary-light);
+    transition: var(--transition-fast);
+    cursor: pointer;
+    user-select: none;
+  }
+  #contato .btn-contact:hover,
+  #contato .btn-contact:focus-visible {
+    background: #f5f5f5;
+    box-shadow:
+      0 0 18px var(--color-primary-light);
+    outline: none;
+  }
+  #contato .btn-contact:focus-visible {
+    outline: 3px solid #FF6666;
+    outline-offset: 3px;
+  }
+  #contato .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  #contato .social-icon {
+    color: var(--color-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: relative;
+  }
+  #contato .social-icon svg {
+    fill: currentColor;
+    transition: color 200ms ease;
+  }
+  #contato .social-icon:hover,
+  #contato .social-icon:focus-visible {
+    color: var(--color-primary-light);
+    outline: none;
+  }
+  #contato .tooltip {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary-light);
+    color: var(--color-white);
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 200ms;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+  }
+  #contato .social-icon:hover .tooltip,
+  #contato .social-icon:focus-visible .tooltip {
+    opacity: 1;
+  }
+  #contato .qr-code {
+    margin-top: 2rem;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px var(--color-primary-light);
+  }
+
+  /* Rodapé */
+  footer {
+    background: var(--color-base-dark-alt);
+    color: #AAA;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 3rem 1rem 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  footer .footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  footer .footer-col {
+    flex: 1 1 240px;
+  }
+  footer .footer-col h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+  footer a {
+    color: #BBB;
+    text-decoration: none;
+  }
+  footer a:hover,
+  footer a:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  footer nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  footer .footer-legal {
+    margin-top: 2rem;
+    color: #666;
+    text-align: center;
+    border-top: 1px solid #222;
+    padding-top: 1rem;
+  }
+
+  /* Accessibility & Misc */
+  [tabindex="-1"]:focus {
+    outline: none !important;
+  }
+
+  /* Responsive */
+
+  @media (max-width: 480px) {
+    #hero {
+      flex-direction: column-reverse;
+      text-align: center;
+      min-height: auto;
+    }
+    #hero-content {
+      max-width: 100%;
+    }
+    #hero-photo-container {
+      max-width: 160px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    #hero-photo {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+    .btn-group {
+      flex-direction: column;
+    }
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-group {
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+    #hero-photo-container {
+      max-width: 240px;
+    }
+    #hero-photo {
+      width: 240px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1025px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+</style>
+
+</head>
+<body>
+
+<header role="banner">
+  <nav class="container" aria-label="Menu principal">
+    <a href="#hero" class="logo" tabindex="0" aria-label="Página inicial RLN DESIGNERS">RLN DESIGNERS</a>
+    <ul class="menu" role="menubar" aria-label="Navegação do site">
+      <li role="none"><a href="#hero" role="menuitem" tabindex="0">Início</a></li>
+      <li role="none"><a href="#sobre-mim" role="menuitem" tabindex="0">Sobre Mim</a></li>
+      <li role="none"><a href="#trabalhos" role="menuitem" tabindex="0">Trabalhos</a></li>
+      <li role="none"><a href="#contato" role="menuitem" tabindex="0">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section id="hero" aria-label="Apresentação do designer Rayron Lima">
+  <!-- Pequenas partículas brilhantes para efeito -->
+  <div class="sparkle" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
+  <div class="sparkle" style="top: 40%; left: 75%; animation-delay: 2s;"></div>
+  <div class="sparkle" style="top: 70%; left: 30%; animation-delay: 4s;"></div>
+  <div class="sparkle" style="top: 85%; left: 65%; animation-delay: 6s;"></div>
+
+  <div id="hero-content">
+    <h1><strong>Transformando ideias</strong><br> em design criativo</h1>
+    <p>“Transformando ideias em design criativo e resultados visuais profissionais.”</p>
+
+    <div class="btn-group" role="group" aria-label="Botões principais de contato e portfólio">
+      <a href="https://www.instagram.com/rlndesigner" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver Instagram do RLN DESIGNERS">
+        <!-- Instagram Icon SVG -->
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.85-1.65a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+        Ver Instagram
+      </a>
+      <a href="https://wa.me/5582981738050?text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento!" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Entrar em contato via WhatsApp para orçamento">
+        <!-- WhatsApp Icon SVG -->
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.39 0 0 5.38 0 12a11.94 11.94 0 002.49 7.05L0 24l4.96-2.57A11.94 11.94 0 0012 24c6.62 0 12-5.38 12-12 0-3.12-1.22-6.04-3.48-8.33zM12 21.53a9.52 9.52 0 01-4.8-1.33l-.34-.2-2.95 1.53 1.57-3.02-.22-.36a9.5 9.5 0 111.92 3.57zM16.23 13.38c-.27-.14-1.58-.78-1.83-.87-.25-.1-.44-.14-.62.14s-.71.87-.87 1.05c-.16.18-.32.2-.58.07a4.84 4.84 0 00-1.53-.89c-.28-.14-.47-.31-.47-.66 0-.35.1-.61.36-.87.27-.27.6-.7.89-1 .3-.3.4-.52.58-.87.17-.34.09-.65-.05-.89-.14-.26-1.35-3.23-1.85-4.42-.49-1.17-1-1.01-1.37-1.03l-.66-.01c-.23 0-.6.09-.92.43s-1.21 1.17-1.21 2.84 1.24 3.3 1.41 3.54c.17.23 2.44 3.72 5.9 5.21.82.35 1.46.56 1.96.72.82.27 1.57.23 2.17.14.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.49.2-1.62-.07-.14-.27-.23-.55-.37z"/></svg>
+        Faça seu orçamento
+      </a>
+      <button type="button" class="btn" id="scroll-to-trabalhos" aria-label="Conheça meu trabalho - rolar para a seção Trabalhos">
+        <!-- Folder icon -->
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a4 4 0 00-4-4h-8zm-1 4h10v8H3V6a1 1 0 011-1h5v3z"/></svg>
+        Conheça meu trabalho
+      </button>
+    </div>
+  </div>
+
+  <div id="hero-photo-container" tabindex="0" aria-label="Foto de Rayron Lima designer gráfico">
+    <img src="imagens\IMG_0066.JPG" alt="Foto de Rayron Lima, designer gráfico RLN DESIGNERS" id="hero-photo" loading="lazy" />
+  </div>
+</section>
+
+<!-- Sobre Mim Section -->
+<section id="sobre-mim" tabindex="-1" aria-label="Sobre o designer Rayron Lima">
+  <h2>Sobre Mim</h2>
+  <p>Sou Rayron Lima, designer gráfico focado em criar identidades visuais impactantes, artes para redes sociais, cardápios e materiais promocionais com estratégia e estética. Minha missão é transformar ideias em projetos únicos, alinhando criatividade, técnica e prazo.</p>
+  <!-- Se houver vídeo fornecido, substituir src/poster -->
+  <!-- Exemplo com poster em preto/vermelho -->
+  <!-- <video controls poster="video-poster.jpg" aria-label="Video apresentação de Rayron Lima">
+    <source src="video-rayron.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video> -->
+  <a href="https://wa.me/5582981738050?text=Olá%20Rayron%2C%20gostaria%20de%20falar%20com%20você." target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="Falar no WhatsApp com Rayron Lima">Falar no WhatsApp</a>
+</section>
+
+<!-- Trabalhos Section -->
+<section id="trabalhos" tabindex="-1" aria-label="Portfólio de trabalhos de Rayron Lima">
+  <h2>Trabalhos</h2>
+
+  <div class="filter-buttons" role="tablist" aria-label="Filtro de categorias do portfólio">
+    <button class="filter-button active" data-filter="all" role="tab" aria-selected="true" tabindex="0">Todos</button>
+    <button class="filter-button" data-filter="eletronicos" role="tab" aria-selected="false" tabindex="-1">Eletrônicos</button>
+    <button class="filter-button" data-filter="automotivo" role="tab" aria-selected="false" tabindex="-1">Automotivo</button>
+    <button class="filter-button" data-filter="fitness" role="tab" aria-selected="false" tabindex="-1">Fitness</button>
+    <button class="filter-button" data-filter="alimentacao" role="tab" aria-selected="false" tabindex="-1">Alimentação</button>
+    <button class="filter-button" data-filter="cardapio" role="tab" aria-selected="false" tabindex="-1">Cardápio</button>
+  </div>
+
+  <div class="portfolio-grid" aria-live="polite" aria-atomic="true">
+    <!-- Cards exemplo: substitua com imagens reais -->
+    <article class="portfolio-card" data-category="eletronicos" tabindex="0" role="button" aria-label="Projeto de Eletrônicos: Design de embalagem para produto eletrônico">
+      <img src="imagens/eletronico.png" alt="Mockup de embalagem para produto eletrônico" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Design Eletrônico 1</h3>
+        <span class="category">Eletrônicos</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card" data-category="automotivo" tabindex="0" role="button" aria-label="Projeto Automotivo: Arte para concessionária de automóveis">
+      <img src="imagens/automotivo.png" alt="Arte para concessionária automotiva" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Artes Automotivas</h3>
+        <span class="category">Automotivo</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card" data-category="fitness" tabindex="0" role="button" aria-label="Projeto Fitness: Design de banner para academia">
+      <img src="imagens/academia.png" alt="Banner fitness para academia" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Banner Academia</h3>
+        <span class="category">Fitness</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card" data-category="alimentacao" tabindex="0" role="button" aria-label="Projeto Alimentação: Campanha para hambúrgueria">
+      <img src="imagens/hamburgueria.png" alt="Campanha visual para hambúrgueria" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Campanha Hambúrgueria</h3>
+        <span class="category">Alimentação</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card" data-category="cardapio" tabindex="0" role="button" aria-label="Projeto Cardápio: Design de cardápio visual para restaurante">
+      <img src="imagens/cardapio.png" alt="Design de cardápio visual para restaurante" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Cardápio Restaurante</h3>
+        <span class="category">Cardápio</span>
+      </div>
+    </article>
+
+    <article class="portfolio-card" data-category="futebol" tabindex="0" role="button" aria-label="Projeto Futebol: Design de futebol para campeonatos">
+      <img src="imagens/futebol.png" alt="Design de futebol para campeonatos" loading="lazy" />
+      <div class="portfolio-info">
+        <h3>Cardápio Restaurante</h3>
+        <span class="category">Cardápio</span>
+      </div>
+    </article>
+
+    <!-- Adicione mais cards conforme necessário -->
+  </div>
+
+  <a href="https://www.instagram.com/rlndesigner" target="_blank" rel="noopener noreferrer" class="btn-instagram" aria-label="Ver mais trabalhos no Instagram do RLN DESIGNERS">
+    Ver mais no Instagram
+  </a>
+</section>
+
+<!-- Lightbox Element -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens do portfólio" tabindex="-1">
+  <button class="close-btn" aria-label="Fechar visualizador" title="Fechar">&times;<span class="sr-only">Fechar</span></button>
+  <button class="prev-btn" aria-label="Imagem anterior" title="Anterior">&#8249;<span class="sr-only">Anterior</span></button>
+  <img src="" alt="" />
+  <button class="next-btn" aria-label="Próxima imagem" title="Próximo">&#8250;<span class="sr-only">Próximo</span></button>
+</div>
+
+<!-- Contato Section -->
+<section id="contato" tabindex="-1" aria-label="Contato e orçamento com Rayron Lima">
+  <p>Pronto para elevar sua marca?</p>
+  <a href="https://wa.me/5582981738050?text=Oi%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" class="btn-contact" aria-label="Fazer orçamento agora via WhatsApp">Fazer Orçamento Agora</a>
+
+  <div class="social-icons" role="list" aria-label="Redes sociais e contato">
+    <a href="https://www.instagram.com/rlndesigner" target="_blank" rel="noopener noreferrer" class="social-icon" role="listitem" tabindex="0" aria-label="Instagram do RLN DESIGNERS">
+      <!-- Instagram SVG -->
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.85-1.65a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+      <span class="tooltip" role="tooltip">Instagram @rlndesigner</span>
+    </a>
+    <a href="https://wa.me/5582981738050" target="_blank" rel="noopener noreferrer" class="social-icon" role="listitem" tabindex="0" aria-label="WhatsApp contato RLN DESIGNERS">
+      <!-- WhatsApp SVG -->
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.39 0 0 5.38 0 12a11.94 11.94 0 002.49 7.05L0 24l4.96-2.57A11.94 11.94 0 0012 24c6.62 0 12-5.38 12-12 0-3.12-1.22-6.04-3.48-8.33zM12 21.53a9.52 9.52 0 01-4.8-1.33l-.34-.2-2.95 1.53 1.57-3.02-.22-.36a9.5 9.5 0 111.92 3.57zM16.23 13.38c-.27-.14-1.58-.78-1.83-.87-.25-.1-.44-.14-.62.14s-.71.87-.87 1.05c-.16.18-.32.2-.58.07a4.84 4.84 0 00-1.53-.89c-.28-.14-.47-.31-.47-.66 0-.35.1-.61.36-.87.27-.27.6-.7.89-1 .3-.3.4-.52.58-.87.17-.34.09-.65-.05-.89-.14-.26-1.35-3.23-1.85-4.42-.49-1.17-1-1.01-1.37-1.03l-.66-.01c-.23 0-.6.09-.92.43s-1.21 1.17-1.21 2.84 1.24 3.3 1.41 3.54c.17.23 2.44 3.72 5.9 5.21.82.35 1.46.56 1.96.72.82.27 1.57.23 2.17.14.66-.1 2.02-.82 2.31-1.62.28-.8.28-1.49.2-1.62-.07-.14-.27-.23-.55-.37z"/></svg>
+      <span class="tooltip" role="tooltip">WhatsApp +55 82 98173-8050</span>
+    </a>
+  </div>
+  <img src="imagens/qrcode.png" alt="Código QR para contato WhatsApp RLN DESIGNERS" class="qr-code" loading="lazy" />
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col" aria-label="Marca RLN DESIGNERS">
+      <h3>RLN DESIGNERS</h3>
+      <p>Rayron Lima - Designer Gráfico</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Navegação do site no rodapé">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col" aria-label="Contato rápido">
+      <h3>Contato</h3>
+      <p>Telefone: (82) 98173-8050</p>
+      <p><a href="https://wa.me/5582981738050" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contato">WhatsApp</a></p>
+      <p><a href="https://www.instagram.com/rlndesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram RLN DESIGNERS">Instagram</a></p>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    LTA - Rayron Lima - 2025 © Todos os direitos reservados. | <a href="#" aria-label="Política de Privacidade">Política de Privacidade</a> | <a href="#" aria-label="Termos de Uso">Termos de Uso</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll suave para Trabalhos (botão do Hero)
+  document.getElementById('scroll-to-trabalhos').addEventListener('click', () => {
+    document.getElementById('trabalhos').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Filtro portfólio
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const tablist = document.querySelector('.filter-buttons');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Atualizar aria-selected e tabindex
+      filterButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+        b.setAttribute('tabindex', '-1');
+      });
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+      button.setAttribute('tabindex', '0');
+      // Filtrar cards
+      const filter = button.dataset.filter;
+      portfolioCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+          card.setAttribute('tabindex', '0');
+        } else {
+          card.style.display = 'none';
+          card.setAttribute('tabindex', '-1');
+        }
+      });
+    });
+  });
+
+  // Lightbox funcionalidade
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.close-btn');
+  const prevBtn = lightbox.querySelector('.prev-btn');
+  const nextBtn = lightbox.querySelector('.next-btn');
+
+  let currentIndex = -1;
+  let visibleCards = [];
+
+  // Atualizar lista de cards visíveis
+  function updateVisibleCards() {
+    visibleCards = Array.from(document.querySelectorAll('.portfolio-card')).filter(c => c.style.display !== 'none');
+  }
+  updateVisibleCards();
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const card = visibleCards[currentIndex];
+    const img = card.querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('active');
+    lightbox.focus();
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+    lightboxImg.alt = '';
+    currentIndex = -1;
+  }
+  function prevLightbox() {
+    if (currentIndex > 0) {
+      openLightbox(currentIndex - 1);
+    }
+  }
+  function nextLightbox() {
+    if (currentIndex < visibleCards.length -1) {
+      openLightbox(currentIndex + 1);
+    }
+  }
+
+  // Abrir lightbox clicando nos cards
+  portfolioCards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      updateVisibleCards();
+      const index = visibleCards.indexOf(card);
+      if (index > -1) openLightbox(index);
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        updateVisibleCards();
+        const index = visibleCards.indexOf(card);
+        if (index > -1) openLightbox(index);
+      }
+    });
+  });
+
+  // Botões lightbox
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', prevLightbox);
+  nextBtn.addEventListener('click', nextLightbox);
+
+  // Keyboard navigation lightbox
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      prevLightbox();
+    } else if (e.key === 'ArrowRight') {
+      nextLightbox();
+    }
+  });
+
+  // Scroll reveal básico para seções
+  function revealOnScroll() {
+    const revealElements = document.querySelectorAll('#sobre-mim, #trabalhos, #contato, header, #hero-content, #hero-photo-container');
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight * 0.85) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.transition = 'opacity 0.9s ease-out, transform 0.9s ease-out';
+      } else {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  document.addEventListener('DOMContentLoaded', () => {
+    // Inicial
+    revealOnScroll();
+
+    // Acessibilidade para primeiro menu ativo
+    filterButtons.forEach((btn,i) => {
+      btn.setAttribute('tabindex', i === 0 ? '0' : '-1');
+    });
+  });
+
+  // Reduce motion preference
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    document.querySelectorAll('.btn, .btn-instagram').forEach(el => {
+      el.style.transition = 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
